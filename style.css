@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+::selection{
+    background-color: #9a4602;
+    color: #def2f1;
+}
+main {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Mulish", sans-serif;
+  display: flex;
+}
+
+.left_side {
+  width: 50%;
+  height: 100%;
+  background-color: #9a4602;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+}
+.circle {
+  width: 200px;
+  height: 200px;
+  border: 3px dashed white;
+  border-radius: 50%;
+}
+.left_side h1 {
+  font-weight: 100;
+}
+
+.right_side {
+  width: 50%;
+  height: 100%;
+  background-color: #242424;
+  display: flex;
+  align-items: center;
+}
+
+.right_side form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 10%;
+  gap: 20px;
+}
+.right_side form > h1 {
+  font-weight: 400;
+  color: #89938b;
+}
+.email {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.email input {
+  width: 60%;
+  height: 40px;
+  background-color: #c0c0c013;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  padding: 10px;
+  font-size: 14px;
+  color: #def2f1;
+}
+.email label{
+    font-size: 12px;
+    color: #5F5F5F;
+}
+
+.password {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .password input {
+    width: 60%;
+    height: 40px;
+    background-color: #c0c0c013;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+    color: #def2f1;
+  }
+  .password label{
+      font-size: 12px;
+      color: #5F5F5F;
+  }
+
+  .remember{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:5px;
+    font-size: 14px;
+    color: #5F5F5F;
+  }
+  .remember input{
+    accent-color: #999;
+    outline: none;
+  }
+  .remember a{
+    text-decoration: none;
+    color: #9a4602;
+  }
+  .btn input{
+    font-family: 'Roboto', sans-serif;
+    width: 60%;
+    background-color: #9a4602;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+  }
+  .btn a {
+    outline: none;
+  }
+  .continue_btn input{
+    font-family: 'Roboto', sans-serif;
+    width: 60%;
+    background-color: #9a4602;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+  }
+
+  .dont_btn{
+    width: 60%;
+    text-align: center;
+    font-size: 15px;
+    color: #aaaaaa;
+  }
+  .dont_btn a{
+    color: #9a4602;
+    text-decoration: none;
+  }
+
+  .full_name {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .full_name input {
+    width: 60%;
+    height: 40px;
+    background-color: #c0c0c013;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+    color: #def2f1;
+  }
+  .full_name label{
+      font-size: 12px;
+      color: #5F5F5F;
+  }
+  
+
+  .birth {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .birth input {
+    width: 60%;
+    height: 40px;
+    background-color: #c0c0c013;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+    color: #5F5F5F ;
+  }
+  .birth label{
+      font-size: 12px;
+      color: #5F5F5F;
+  }
+
+
+  .status option{
+    font-size: 16px;
+  }
+
+
+/* *************************************************************** */

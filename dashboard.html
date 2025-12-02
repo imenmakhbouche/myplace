@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <script
+      src="https://kit.fontawesome.com/f759f54109.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <h1 id="logo">MY PLACE</h1>
+      <ul class="user">
+        <li><i class="fa-solid fa-bell"></i></li>
+        <li>
+          <i class="fa-solid fa-circle-user"></i>
+          <ol class="dropdown">
+            <li><a href="#">Account Settings</a></li>
+            <a href="login.html"><li>Logout</li></a>
+            <li><a href="#"> Dark Mode </a></li>
+          </ol>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Aside $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+      <aside>
+        <h1>Tasks</h1>
+        <ul id="tasks_lists"></ul>
+        <h1>Events</h1>
+        <ul id="event_list">
+          <li></li>
+        </ul>
+      </aside>
+      <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+
+      <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Home $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+      <div class="home">
+        <div class="box">
+          <h1>To Do list</h1>
+          <i class="fa-sharp fa-solid fa-clipboard-list" id="tdl_icon"></i>
+        </div>
+        <div class="box">
+          <h1>Journal</h1>
+          <i class="fa-solid fa-book" id="journal_icon"></i>
+        </div>
+        <div class="box">
+          <h1>Gallery</h1>
+          <i class="fa-sharp fa-solid fa-images" id="gallery_icon"></i>
+        </div>
+        <div class="box">
+          <h1>Focus Time</h1>
+          <i class="fa-regular fa-hourglass-half" id="focus_icon"></i>
+        </div>
+        <div class="box">
+          <h1>Wallet</h1>
+          <i class="fa-solid fa-wallet" id="wallet_icon"></i>
+        </div>
+        <div class="box">
+          <h1>Calendar</h1>
+          <i class="fa-solid fa-calendar-days" id="calendar_icon"></i>
+        </div>
+      </div>
+      <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+
+      <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ To Do List$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+      <div id="to_do_list">
+        <h1>To Do List</h1>
+        <div class="write">
+          <form name="form">
+            <input
+              type="text"
+              name="typing_text"
+              placeholder="Write Here"
+              id="typing_text"
+            />
+          </form>
+          <button id="add_btn">ADD</button>
+        </div>
+      </div>
+      <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+
+      <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Focus Timer $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+
+      <div class="focus">
+        <div class="set_timer">
+          <h1>Set Timer:</h1>
+          <span id="timer">
+            <input
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              maxlength="2"
+              type="number"
+              value="00"
+              min="0"
+              max="24"
+              name=""
+              id="hours"
+            />
+            <input
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              maxlength="2"
+              type="number"
+              value="00"
+              min="0"
+              max="59"
+              name=""
+              id="minutes"
+            />
+            <input
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              maxlength="2"
+              type="number"
+              value="00"
+              min="0"
+              max="59"
+              name=""
+              id="seconds"
+            />
+          </span>
+        </div>
+        <div class="timer_circle">
+          <span id="timer_show">00:00:00</span>
+        </div>
+        <div class="timer_control">
+          <i class="fa-solid fa-reply" id="reset_btn"></i>
+          <i class="fa-solid fa-pause" id="pause_btn"></i>
+          <i class="fa-solid fa-play" id="play_btn"></i>
+        </div>
+      </div>
+
+      <!-- ****************************************** Wallet ******************************************* -->
+      <div class="wallet">
+        <p><span>Balance:</span> 3000$</p>
+        <div class="history">
+          <h1>History:</h1>
+          <br />
+          <ul>
+            <li>
+              <span class="w_date">10/02/23</span> test test test
+              <span class="money">+220$</span>
+            </li>
+            <li>
+              <span class="w_date">14/02/22</span> test test test
+              <span class="money">-130$</span>
+            </li>
+            <li>
+              <span class="w_date">04/06/22</span> test test test
+              <span class="money">+40$</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ******************************************************************************************** -->
+
+      <!-- ****************************************** Journal ******************************************* -->
+      <div class="journal_section">
+        <div class="writing_area">
+          <div class="title_date">
+            <input type="text" placeholder="Title" id="title_journal" />
+            <input type="date" name="" id="date_journal" />
+          </div>
+          <textarea name="" id="typing_area"></textarea>
+          <div class="journal_btns">
+            <button id="save_btn_journal">Save</button>
+            <button id="cancel_btn_journal">Cancel</button>
+          </div>
+        </div>
+        <ul class="recents_j">
+          <h1>My Journals</h1>
+        </ul>
+      </div>
+      <!-- ******************************************************************************************** -->
+
+      <!-- ****************************************** Gallery ******************************************* -->
+      <div class="gallery_section">
+        <h1>Album</h1>
+        <ul>
+          <li><img src="https://i.pinimg.com/736x/95/ce/08/95ce08653d0114069296e31c404da598.jpg" alt="" id="uploadedImage"></li>
+          <li>
+            <label for="files" class="file_btn">+</label>
+            <input id="files" type="file" />
+          </li>
+        </ul>
+      </div>
+      <!-- ******************************************************************************************** -->
+      
+      <!-- ****************************************** Calendar ******************************************* -->
+      <div class="calendar_section">
+        <table>
+          <!-- days -->
+          <tr id="days">
+            <th>Sunday</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednsday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+          </tr>
+          <!--  -->
+
+          <tr>
+            <td colspan="2"></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+          </tr>
+
+          <tr>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+          </tr>
+          <tr>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+            <td>30</td>
+            <td>31</td>
+            <td colspan="2"></td>
+          </tr>
+        </table>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
